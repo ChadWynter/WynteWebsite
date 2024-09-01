@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<style type="text/css">
+		body {background:white}
+	</style>
+  </head>
+  	<body>
+		<nav class="navbar navbar-expand-lg bg-white">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Source Code</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+
+				<a class="nav-link" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" aria-current="projects" href="/projects.html">Projects</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link active" href="#">Source Code</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link disabled">Disabled</a>
+				</li>
+			</ul>
+			</div>
+		</div>
+		</nav>
+		<div class="container-fluid text-center mt-2" >
+        <h4>Select Project to view/download source code</h4>
+		<hr>
+        <div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingTemp">
+				<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTemp" aria-expanded="true" aria-controls="collapseTemp">
+					Python Temperature Monitor
+				</button>
+				</h2>
+				<div id="collapseTemp" class="accordion-collapse collapse show" aria-labelledby="headingTemp" data-bs-parent="#accordionExample">
+				<div class="container-fluid">
+					<div class="accordion-body text-center">
+						<div class="mb-2"><p><strong>A Python Application to monitor a temperature sensor</strong></p></div>
+						<a type="button" class="btn btn-dark" href="/" download="TemperatureGraph.py">Download</a>
+						<p>TemperatureGraph.py</p><embed class="w-100" src="/TemperatureGraph.txt">
+					</div>
+					<div class="mb-2"><p><strong>API to communnicate with database that stored temperature data</strong></p></div>
+					<a type="button" class="btn btn-dark" href="/" download="firebase_db.py">Download</a>
+					<p>firebase_db.py</p><embed class="w-100" src="/firebase_db.txt">
+				</div>
+				</div>
+			</div>
+
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingElect">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseElect" aria-expanded="false" aria-controls="collapseElect">
+						Elect-Me web application
+					</button>
+					</h2>
+					<div id="collapseElect" class="accordion-collapse collapse" aria-labelledby="headingElect" data-bs-parent="#accordionExample">
+					<div class="container-fluid">
+						<div class="accordion-body text-center">
+							<div class="mb-2"><p><strong>A Python_Flask Election Web Application</strong></p></div>
+							<div class="mb-2"><p>Only Backend code shown</p></div>
+							<a type="button" class="btn btn-dark" href="/" download="myapp.py">Download</a>
+							<p>myapp.py</p><embed class="w-100" src="/myapp.txt">
+						</div>
+					</div>
+					</div>
+				</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							RPS.py
+						</button>
+						</h2>
+						<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						<div class="container-fluid">
+							<div class="accordion-body text-center">
+								<div class="mb-2"><p><strong>A user vs PC terminal Rock Paper Scissors Game</strong></p></div>
+                            	<button type="button" class="btn btn-dark">Download</button>
+                            	<p>RPS.py</p><embed class="w-100" src="/RPS.txt">
+							</div>
+						</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingTwo">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Hangman.py
+						</button>
+						</h2>
+						<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+						<div class="accordion-body text-center">
+							<div class="mb-2"><p><strong>A user vs user terminal Hangman Game</strong></p></div>
+							
+								<button type="button" class="btn btn-dark">Download</button>
+								<p>RunHangman.py</p><embed class="w-100" src="RunHangman.txt">
+								<button type="button" class="btn btn-dark mt-2">Download</button>
+								<p>Hangman.py</p><embed class="w-100" src="Hangman.txt">
+							
+						</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingThree">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							Transcript-Generator.cpp
+						</button>
+						</h2>
+						<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+						<div class="accordion-body text-center">
+							<div class="mb-2"><p><strong>A cpp program to generate transcripts based on user input</strong></p></div>
+							
+								<button type="button" class="btn btn-dark">Download</button>
+								<p>GPACalc.cpp</p><embed class="w-100" src="GPACalc.txt">
+							
+						</div>
+						</div>
+					</div>
+				</div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+from Hangman import *
+import getpass
+
+number_wrong = 0
+number_right = 0
+letters = []
+current_word = ""
+words_guessed = []
+
+while True:
+    print("Lets play Hangman!")
+    x = input("Return any key to play or 0 to quit: ")
+    if x == '0':
+        quit()
+    else:
+        print("\n")
+        word = getpass.getpass(prompt = "Player 1: Enter a word below\n")
+
+        for v in word:
+            if v not in letters:
+                letters.append(v)
+        #print(letters)
+        current_word ="_ "*len(word)
+        while True:
+            print("_________________________________________________________")
+            print("number wrong: " + str(number_wrong)) 
+            print(current_word)
+            print("letters guessed: " + str(words_guessed) + "\n")
+            print_body(number_wrong)
+            if number_wrong != 9:
+                response = input("Player 2, enter a letter: ")
+                print("\n")
+                if len(response) > 1:
+                    print("Please only enter 1 letter at a time")
+                else:
+                    if response.lower() not in current_word:
+                        if response.lower() in letters:
+                            print("Good Guess!") 
+                            number_right = number_right + 1
+                            if number_right == len(letters):
+                                print("YAY! YOU WIN AND GET TO LIVE")
+                                print("The word was: " + word + "\n")
+                                number_wrong = 0
+                                number_right = 0
+                                letters = []
+                                current_word = ""
+                                words_guessed = []
+                                break
+                            else:
+                                indices = []
+                                for l in range (len(word)):
+                                    if word[l].lower() == response.lower():
+                                        indices.append(l)
+                                for s in indices:
+                                    current_word = current_word[:(2*s)] + response + current_word[(2*s) + 1:]
+                        else:
+                            if response.lower() not in words_guessed:
+                                words_guessed.append(response.lower())
+                            number_wrong = number_wrong + 1
+                            print("Uh Oh.. Bad Guess Please Try Again")
+            else:
+                number_wrong = 0
+                number_right = 0
+                letters = []
+                current_word = ""
+                words_guessed = []
+                print("GAME OVER! YOU ARE DEAD :( ")
+                print("The word was: " + word + "\n")
+                break

@@ -1,0 +1,138 @@
+#include "iostream"
+#include "map"
+#include "fstream"
+
+using namespace std;
+
+void exportToFile(){
+	cout<<"Exporting"<<endl;
+}
+map<string,string> inputtedGrades;
+
+int main(int argc, char *argv[])
+{
+	//cout << "Hello World!"<<endl;
+	if (argc == 1){
+		map<string,double> gradeScale;
+
+		int year;
+		int scale;
+		string s;
+		string grades;
+		string name;
+		string delimeter1 = ",";
+		string delimeter2 = ":";
+
+		cout<< "No arguments have been entered"<<endl;
+		cout<<"argument format: \"Your Name\" \"\" \"List of comma serperated class names\" \"List of comma seperated Grade values\""<<endl;
+		cout<<"What is your name?"<<endl;
+		cin>>name;
+		cout<<"Enter current year in school"<<endl;
+		cin>>year;
+
+
+		cout<<"Enter a \"1\" for 4.0 scale and \"2\" for 5.0 scale"<<endl;
+		cin>>scale;
+		if (scale == 1){
+			gradeScale["A+"] = 4.0;
+			gradeScale["A"] = 4.0;
+			gradeScale["A-"] = 3.7;
+			gradeScale["B+"] = 3.3;
+			gradeScale["B"] = 3.0;
+			gradeScale["B-"] = 2.7;
+			gradeScale["C+"] = 2.3;
+			gradeScale["C"] = 2.0;
+			gradeScale["C-"] = 1.7;
+			gradeScale["D+"] = 1.3;
+			gradeScale["D"] = 1.0;
+			gradeScale["F"] = 0.0;
+		}
+		else if (scale == 2){
+			gradeScale["A+"] = 4.0;
+			gradeScale["A"] = 4.0;
+			gradeScale["A-"] = 3.7;
+			gradeScale["B+"] = 3.3;
+			gradeScale["B"] = 3.0;
+			gradeScale["B-"] = 2.7;
+			gradeScale["C+"] = 2.3;
+			gradeScale["C"] = 2.0;
+			gradeScale["C-"] = 1.7;
+			gradeScale["D+"] = 1.3;
+			gradeScale["D"] = 1.0;
+			gradeScale["F"] = 0.0;
+		}
+		else{
+			return -1;
+		}
+
+		cout<<"enter a list of comma seperated classnames:grades"<<endl;
+		cout<<"example format: \"Embedded Systems:A-,Rhetoric:B\""<<endl;
+		cin>>grades;
+
+		size_t pos = 0;
+		size_t pos1 = 0;
+		string token;
+		string token2;
+		string temptoken;
+		double GPA = 0;
+		double classes = 0;
+		while ((pos = grades.find(delimeter1)) != std::string::npos){
+			token = grades.substr(0,pos);
+			//cout<<token<<endl;
+			temptoken = token;
+			while((pos1 = temptoken.find(delimeter2)) != std::string::npos){
+				token2 = temptoken.substr(0,pos1);
+				temptoken.erase(0,pos1+delimeter2.length());
+			}
+			inputtedGrades[token2] = temptoken;
+			pos1 = 0;
+			grades.erase(0,pos + delimeter1.length());
+		}
+		temptoken = grades;
+		//cout<<temptoken<<endl;
+		while((pos1 = temptoken.find(delimeter2)) != std::string::npos){
+			token2 = temptoken.substr(0,pos1);
+			temptoken.erase(0,pos1+delimeter2.length());
+		}
+		inputtedGrades[token2] = temptoken;
+
+		string filename = name +"-transcript.txt";
+		ofstream myfile(filename);
+		myfile<<name<<" "<<"Transcript"<<endl;
+		myfile<<""<<endl;
+
+		myfile<<"--------------------------------------"<<endl;
+		myfile<<"Grade Scale:"<<endl;
+		for(const auto& elem : gradeScale){
+			myfile<<elem.first<<"     "<<elem.second<<endl;
+		}
+		myfile<<"--------------------------------------"<<endl;
+		myfile<<""<<endl;
+		cout<<"Grades entered:"<<endl;
+		myfile<<"Grades"<<endl;
+		for(const auto& elem : inputtedGrades){
+			GPA = GPA + gradeScale[elem.second];
+			classes++;
+			cout << elem.first << " " << elem.second<<endl;
+			if (myfile.is_open()){
+				myfile<<elem.first<< "     "<<elem.second<<endl;
+			}
+		}
+		cout<<"Total GPA is: "<<GPA/classes<<endl;
+		cout<<"Please see the auto-generated "<<name<<"-transcript.txt file in this directory for more information.";
+		myfile<<"--------------------------------------"<<endl;
+		myfile<<""<<endl;
+		myfile<<"GPA:"<<GPA/classes<<endl;
+
+		myfile.close();
+	}
+	else{
+		cout<<"Arguments: "<<endl;
+		for (int i = 0; i < argc; i++){
+			cout<< argv[i] <<endl;
+		}
+		cout<<"Arguments are not currently accepted"<<endl;
+	}
+	return 0;
+}
+

@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<style type="text/css">
+		body {background:white}
+	</style>
+  </head>
+  	<body>
+		<nav class="navbar navbar-expand-lg bg-white">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Projects</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+
+				<a class="nav-link active" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" aria-current="projects" href="#">Projects</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="/source.html">Source Code</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link disabled">Disabled</a>
+				</li>
+			</ul>
+			</div>
+		</div>
+		</nav>
+		<div class="container-fluid bg-dark mb-2" >
+			<hr style="border-top: 5px solid;">
+		</div>
+		<div class="container-fluid bg-dark text-center pt-2" id="test1" style="border-block: 50px solid">
+			<div class="container text-center">
+				<div class="row">
+            		<div class="col-sm">
+					    <img src="IMG_0015.JPG" class="img-fluid">
+					</div>
+				    <div class="col-sm align-self-center">
+					    <h1 class="text-white mt-2">Projects</h1>
+
+					    <p class="text-white py-3">Select one of my past projects to view more information</p>
+                        <div class="dropdown mt-2">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="projectsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Project
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+								<a class="dropdown-item" onclick="show4();">Sleep-Tracker</a>
+								<a class="dropdown-item" onclick="show5();">Temperature Sensor</a>
+								<a class="dropdown-item" onclick="show7();">Election Tool</a>
+								<a class="dropdown-item" onclick="show6();"> Secure Web Chat</a>
+                                <a class="dropdown-item" onclick="show1();">Rock Paper Scissors</a>
+                                <a class="dropdown-item" onclick="show2();">C++ Memory usage viewer</a>
+								<a class="dropdown-item" onclick="show3();">Hangman</a>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			  </div>	
+		</div>
+		<div class="container-fluid pt-2" id="test2">
+			<div class="card" id="Day-Scheduler">
+                <h3 class="text-dark">ReactJs Sleep Tracking application</h3>
+				<div class="container-fluid"><hr></div>
+				<div class="containter-fluid">
+					This program was created to enable users to log sleep hours during the week, and look back at a graph to view trends. 
+				</div>
+				<div class="row mb-5 align-items-right">
+					<div class="col-sm align-items-right">
+				<div class="container-fluid mt-3">
+					Skills utilized on this project: 
+					<div><ul>
+						<li>ReactJS</li>
+						<li>Javacsript</li>
+						<li>Java</li>
+						<li>Html</li>
+						<li>Chart.js</li>
+					</ul></div>
+				</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					<img src="Sleep Data.JPG" style="max-height: 600px;" class="d-block w-100" alt="...">
+					</div>
+				</div>
+				</div>
+            </div>
+			<div class="card" id="Election">
+                <h3 class="text-dark">An Election voting and viewing tool</h3>
+				<div class="container-fluid"><hr></div>
+				<div class="containter-fluid">
+					This progarm was made in school as a project to provide users with a way to vote in elections, and view election data. 
+				</div>
+				<div class="row mb-5 align-items-right">
+					<div class="col-sm align-items-right">
+				<div class="container-fluid mt-3">
+					Skills utilized on this project: 
+					<div><ul>
+						<li>Flask</li>
+						<li>Python</li>
+						<li>HTML</li>
+						<li>MYSQL</li>
+						<li>Github</li>
+					</ul></div>
+				</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					<img src="Create Accout Elect Me.JPG" style="max-height: 600px;" class="d-block w-100" alt="...">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					<img src="Elect Me.JPG" style="max-height: 600px;" class="d-block w-100" alt="...">
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="card" id="SecureChat">
+				<h3 class="text-dark"> A Socket Server based web chat application</h3>
+				<div class="container-fluid"><hr></div>
+				<div class="containter-fluid">
+					This web application is being created to give me practice in socket programming. I am utilizing TCP sockets to enable secure communication between users visiting the site. <a href="/chat.html">Click here</a> to explore. 
+				</div>
+			</div>
+			<div class="card" id="RPS">
+                <h3 class="text-dark">Rock Paper Scissors</h3>
+				<div class="container-fluid"><hr></div>
+				<div class="containter-fluid">
+					This is a simple Python App that uses the python random library to create an interactive terminal Rock Paper Scisors game.
+				</div>
+				<div class="row mb-5 align-items-right">
+					<div class="col-sm align-items-right">
+				<div class="container-fluid mt-3">
+					Skills utilized on this project: 
+					<div><ul>
+						<li>Python</li>
+						<li>Random.py</li>
+						<li>Time.py</li>
+					</ul></div>
+				</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					<img src="RPS.JPG" style="max-height: 600px;" class="d-block w-100" alt="...">
+					</div>
+				</div>
+				</div>
+			</div>
+            <div class="card" id="Transcript">
+                <h3 class="text-dark">C++ Memory App under construction</h3>
+            </div>
+			<div class="card" id="Hangman">
+                <h3 class="text-dark">Python terminal hangman</h3>
+				<div class="container-fluid"><hr></div>
+				<div class="containter-fluid">
+					This Hangman game utilizes command line user interaction to play the hangman game.
+				</div>
+				<div class="row mb-5 align-items-right">
+					<div class="col-sm align-items-right">
+				<div class="container-fluid mt-3">
+					Skills utilized on this project: 
+					<div><ul>
+						<li>Python</li>
+						<li>Random.py</li>
+						<li>Command Line Inputs</li>
+					</ul></div>
+				</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					<img src="Hangman.JPG" style="max-height: 600px;" class="d-block w-100" alt="...">
+					</div>
+				</div>
+				</div>
+            </div>
+			<div class="card" id="TempSense">
+                <h3 class="text-dark">Python GUI temperature sensor application</h3>
+				<div class="container-fluid"><hr></div>
+				<div class="containter-fluid">
+					This program was created to provide an interactive GUI to enable users to monitor a temperature sensor communicating through web sockets. A gmail API was used in order to send text message notifications.
+				</div>
+				<div class="row mb-5 align-items-right">
+					<div class="col-sm align-items-right">
+				<div class="container-fluid mt-3">
+					Skills utilized on this project: 
+					<div><ul>
+						<li>Python</li>
+						<li>Numpy</li>
+						<li>Matplotlib</li>
+						<li>Pyrebase</li>
+						<li>Google API</li>
+					</ul></div>
+				</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					<img src="Temp.JPG" style="max-height: 600px;" class="d-block w-100" alt="...">
+					</div>
+				</div>
+				</div>
+            </div>
+		</div>
+
+        <script type="text/javascript">    
+        var x = document.getElementById('Transcript');
+        x.style.display = "none";
+		document.getElementById('SecureChat').style.display="none";
+		document.getElementById('Election').style.display="none";
+		document.getElementById('Hangman').style.display="none";
+		document.getElementById('Day-Scheduler').style.display="block";
+		document.getElementById('TempSense').style.display="none";
+		document.getElementById('RPS').style.display = "none";
+		function show1(){
+			document.getElementById('Transcript').style.display = "none";
+			document.getElementById('RPS').style.display = "block";
+			document.getElementById('Hangman').style.display="none";
+			document.getElementById('Day-Scheduler').style.display="none";
+			document.getElementById('TempSense').style.display="none";
+			document.getElementById('SecureChat').style.display = "none";
+			document.getElementById('Election').style.display = "none";
+
+		}
+		function show2(){
+			document.getElementById('Transcript').style.display = "block";
+			document.getElementById('RPS').style.display = "none";
+			document.getElementById('Hangman').style.display="none";
+			document.getElementById('Day-Scheduler').style.display="none";
+			document.getElementById('TempSense').style.display="none";
+			document.getElementById('SecureChat').style.display = "none";
+			document.getElementById('Election').style.display = "none";
+
+		}
+		function show3(){
+			document.getElementById('Transcript').style.display = "none";
+			document.getElementById('RPS').style.display = "none";
+			document.getElementById('Hangman').style.display="block";
+			document.getElementById('Day-Scheduler').style.display="none";
+			document.getElementById('TempSense').style.display="none";
+			document.getElementById('SecureChat').style.display = "none";
+			document.getElementById('Election').style.display = "none";
+
+		}
+		function show4(){
+			document.getElementById('Transcript').style.display = "none";
+			document.getElementById('RPS').style.display = "none";
+			document.getElementById('Hangman').style.display="none";
+			document.getElementById('Day-Scheduler').style.display="block";
+			document.getElementById('TempSense').style.display="none";
+			document.getElementById('SecureChat').style.display = "none";
+			document.getElementById('Election').style.display = "none";
+
+		}
+		function show5(){
+			document.getElementById('Transcript').style.display = "none";
+			document.getElementById('RPS').style.display = "none";
+			document.getElementById('Hangman').style.display="none";
+			document.getElementById('Day-Scheduler').style.display="none";
+			document.getElementById('TempSense').style.display="block";
+			document.getElementById('SecureChat').style.display = "none";
+			document.getElementById('Election').style.display = "none";
+		}
+		function show6(){
+			document.getElementById('SecureChat').style.display = "block";
+			document.getElementById('Transcript').style.display = "none";
+			document.getElementById('RPS').style.display = "none";
+			document.getElementById('Hangman').style.display="none";
+			document.getElementById('Day-Scheduler').style.display="none";
+			document.getElementById('TempSense').style.display="none";
+			document.getElementById('Election').style.display = "none";
+		}
+		function show7(){
+			document.getElementById('Transcript').style.display = "none";
+			document.getElementById('RPS').style.display = "none";
+			document.getElementById('Hangman').style.display="none";
+			document.getElementById('Day-Scheduler').style.display="none";
+			document.getElementById('TempSense').style.display="none";
+			document.getElementById('SecureChat').style.display = "none";
+			document.getElementById('Election').style.display = "block";
+	}
+
+	
+		
+        
+        </script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  	</body>
+
+</html>
+ 
